@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Usuários</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1.2em;
+            text-align: left;
+        }
+
+        table thead tr {
+            background-color: #009879;
+            color: white;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+        }
+
+        table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        button {
+            margin-right: 10px;
+            padding: 5px 10px;
+            background-color: #009879;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #007a65;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gerenciar Usuários</h1>
+
+    <!-- Formulário -->
+    <form id="user-form">
+        <input type="hidden" id="user-id">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="text" id="usuario" placeholder="Usuário" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <!-- Tabela para listar usuários -->
+    <h3>Lista de Usuários</h3>
+    <table border="1" cellPadding="10">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Usuário</th>
+                <th>Senha</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="user-list">
+            <!-- Linhas de usuários serão inseridas aqui -->
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
